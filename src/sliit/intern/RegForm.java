@@ -121,6 +121,8 @@ public class RegForm extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         jTextField1.setText("");
         jPasswordField1.setText("");
+        jTextField1.requestFocus();
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -136,6 +138,8 @@ public class RegForm extends javax.swing.JFrame {
             p.executeUpdate();
             
             JOptionPane.showMessageDialog(this, "Added to DB");
+            jButton2ActionPerformed(evt);
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
