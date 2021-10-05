@@ -6,6 +6,7 @@ package sliit.intern;
 
 import java.util.Vector;
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -190,8 +191,20 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //JOptionPane.showMessageDialog(this, "Button was Clicked");
 
-        jProgressBar1.setValue(names.size() * 10);
-        
+        //jProgressBar1.setValue(names.size() * 10);
+        jButton1.setEnabled(false);
+        new Thread(() -> {
+            for (int i = 0; i < 100; i++) {
+                final int val = i;
+                try {
+                    Thread.sleep(20);
+                } catch (Exception e) {
+                }
+                jProgressBar1.setValue(val);
+            }
+            jButton1.setEnabled(true);
+        }).start();
+
         String name = jTextField1.getText();
         names.add(name);
         jList1.setListData(names);
