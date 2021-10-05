@@ -1,7 +1,19 @@
 package sliit.intern;
 
+import java.sql.*;
+
 public class DB {
-    public static void connect() throws Exception {
-        Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+    private static String url = "jdbc:mysql://localhost:3306/studenrecords";
+    private static String username = "root";
+    private static String password = "123456789";
+
+    private static Connection c;
+    
+    public static Connection connect() throws Exception {
+        if (c == null || c.isClosed()) {
+            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+            c = DriverManager.getConnection(url, username, password);
+        }
+        return c;
     }
 }
