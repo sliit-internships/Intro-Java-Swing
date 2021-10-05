@@ -12,7 +12,10 @@ public class Main {
         //MainFrame frame = new MainFrame();
         //frame.setVisible(true);
         
-        LoginForm form = new LoginForm();
+        //LoginForm form = new LoginForm();
+        //form.setVisible(true);
+        
+        RegForm form = new RegForm();
         form.setVisible(true);
     }
 }
