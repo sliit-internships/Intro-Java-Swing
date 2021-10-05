@@ -9,7 +9,10 @@ public class Main {
         UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         // UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
         
-        MainFrame frame = new MainFrame();
-        frame.setVisible(true);
+        //MainFrame frame = new MainFrame();
+        //frame.setVisible(true);
+        
+        RegForm form = new RegForm();
+        form.setVisible(true);
     }
 }

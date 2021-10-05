@@ -3,7 +3,7 @@ package sliit.intern;
 import java.sql.*;
 
 public class DB {
-    private static String url = "jdbc:mysql://localhost:3306/studenrecords";
+    private static String url = "jdbc:mysql://localhost:3306/studentrecords";
     private static String username = "root";
     private static String password = "123456789";
 
