@@ -5,8 +5,7 @@
 package sliit.intern;
 
 import java.util.Vector;
-
-
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -195,12 +194,15 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       
-       names.clear();
-       jList1.setListData(names);
-       jTextField1.setText("");
-       jTextField1.requestFocus();
-        
+
+        int response = JOptionPane.showConfirmDialog(this, "Are you sure?");
+        if (response == JOptionPane.YES_OPTION) {
+            names.clear();
+            jList1.setListData(names);
+            jTextField1.setText("");
+            jTextField1.requestFocus();
+        }
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
