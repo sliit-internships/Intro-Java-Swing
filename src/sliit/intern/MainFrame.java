@@ -53,7 +53,6 @@ public class MainFrame extends javax.swing.JFrame {
         setTitle("My First JFrame");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 153));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Personal Details"));
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
